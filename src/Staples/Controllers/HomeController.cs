@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Staples.Models;
 
 namespace Staples.Controllers
 {
@@ -13,18 +10,10 @@ namespace Staples.Controllers
             return View();
         }
 
-        public IActionResult About()
+        [HttpPost]
+        public IActionResult Create([Bind("Name", "Surname","Address","PhoneNumber")]Person person)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            return RedirectToAction("Index");
         }
 
         public IActionResult Error()
