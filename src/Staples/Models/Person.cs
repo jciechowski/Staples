@@ -1,4 +1,7 @@
-﻿using Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using Models;
+using System;
+
 namespace Staples.Models
 {
     public class Person : IDbSaveable

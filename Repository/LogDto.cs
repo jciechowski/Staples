@@ -1,4 +1,6 @@
-﻿namespace Repository
+﻿using System;
+
+namespace Repository
 {
     public class LogDto
     {

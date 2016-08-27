@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Repository;
 using Staples.Models;
+using System;
 
 namespace Staples.Controllers
 {
     public class HomeController : Controller
     {
-        private MapService _saveService;
+        private SaveService _saveService;
 
-        public HomeController(MapService saveService)
+        public HomeController(SaveService saveService)
         {
             _saveService = saveService;
         }
@@ -20,7 +21,7 @@ namespace Staples.Controllers
         [HttpPost]
         public IActionResult Create([Bind("Name", "Surname","Address","PhoneNumber")]Person person)
         {
-            var logDto = _saveService.Map(person);
+            _saveService.Save(person);
             return RedirectToAction("Index");
         }
     }
