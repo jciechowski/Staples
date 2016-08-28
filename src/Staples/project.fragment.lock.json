@@ -35,17 +35,17 @@
           "codeLanguage": "any",
           "copyToOutput": true
         },
-        "bin/Debug/database.mdf": {
+        "bin/Debug/logdb.mdf": {
           "buildAction": "Content",
           "codeLanguage": "any",
           "copyToOutput": true,
-          "outputPath": "database.mdf"
+          "outputPath": "logdb.mdf"
         },
-        "bin/Debug/database_log.ldf": {
+        "bin/Debug/logdb_log.ldf": {
           "buildAction": "Content",
           "codeLanguage": "any",
           "copyToOutput": true,
-          "outputPath": "database_log.ldf"
+          "outputPath": "logdb_log.ldf"
         },
         "bin/Debug/nlog.config": {
           "buildAction": "Content",

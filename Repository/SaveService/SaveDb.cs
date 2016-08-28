@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 
 namespace Repository
 {
@@ -6,14 +7,14 @@ namespace Repository
     {
         public void Save(LogDto logDto)
         {
-            using (var dbConnection = new SqlConnection(Properties.Settings.Default.DatabaseConnectionString))
+            using (var dbConnection = new SqlConnection(Properties.Settings.Default.LogDBConnectionString))
             {
                 dbConnection.Open();
                 using (var cmd = new SqlCommand("INSERT INTO LogInfo ( Name, Surname) VALUES (@Name, @Surname)", dbConnection))
                 {
-                    cmd.Parameters.AddWithValue("Name", logDto.Name);
-                    cmd.Parameters.AddWithValue("Surname", logDto.Surname);
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@Name", logDto.Name);
+                    cmd.Parameters.AddWithValue("@Surname", logDto.Surname);
+                    var result = cmd.ExecuteNonQuery();
                 }
                 dbConnection.Close();
             }
