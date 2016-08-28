@@ -4,9 +4,9 @@ namespace Repository
 {
     public class MapService
     {
-        public LogDto Map(IDbSaveable person)
+        public LogDto Map(IPerson person)
         {
-            Mapper.Initialize(cfg => cfg.CreateMap<IDbSaveable, LogDto>());
+            Mapper.Initialize(cfg => cfg.CreateMap<IPerson, LogDto>());
             return Mapper.Map<LogDto>(person);
         }
     }

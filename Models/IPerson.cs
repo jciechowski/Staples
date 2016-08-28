@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Models
+﻿namespace Models
 {
-    public interface IDbSaveable
+    public interface IPerson
     {
         string Name { get; set; }
         string Surname { get; set; }

@@ -4,7 +4,7 @@ using System;
 
 namespace Staples.Models
 {
-    public class Person : IDbSaveable
+    public class Person : IPerson
     {
         public string Name { get; set; }
         public string Surname { get; set; }

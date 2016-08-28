@@ -72,10 +72,7 @@
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LogDto.cs" />
-    <Compile Include="ILoadable.cs" />
     <Compile Include="ISaveable.cs" />
-    <Compile Include="LogSave.cs" />
-    <Compile Include="Database.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MapService.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -83,8 +80,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SaveDb.cs" />
+    <Compile Include="SaveLog.cs" />
     <Compile Include="SaveService.cs" />
-    <Compile Include="XmlSave.cs" />
+    <Compile Include="SaveXml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
