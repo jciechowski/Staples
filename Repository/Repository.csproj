@@ -68,19 +68,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="LogDto.cs" />
-    <Compile Include="ISaveable.cs" />
+    <Compile Include="SaveService\LogDto.cs" />
+    <Compile Include="SaveService\ISaveable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MapService.cs" />
+    <Compile Include="SaveService\MapService.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SaveDb.cs" />
-    <Compile Include="SaveLog.cs" />
-    <Compile Include="SaveService.cs" />
-    <Compile Include="SaveXml.cs" />
+    <Compile Include="SaveService\SaveDb.cs" />
+    <Compile Include="SaveService\SaveLog.cs" />
+    <Compile Include="SaveService\SaveService.cs" />
+    <Compile Include="SaveService\SaveXml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
