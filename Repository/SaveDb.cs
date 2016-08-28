@@ -9,10 +9,13 @@ namespace Repository
             using (var dbConnection = new SqlConnection(Properties.Settings.Default.DatabaseConnectionString))
             {
                 dbConnection.Open();
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO LogInfo ( Name, Surname) VALUES (@Name, @Surname)", dbConnection);
-                cmd.Parameters.AddWithValue("Name", logDto.Name);
-                cmd.Parameters.AddWithValue("Surname", logDto.Surname);
-                cmd.ExecuteNonQuery();
+                using (var cmd = new SqlCommand("INSERT INTO LogInfo ( Name, Surname) VALUES (@Name, @Surname)", dbConnection))
+                {
+                    cmd.Parameters.AddWithValue("Name", logDto.Name);
+                    cmd.Parameters.AddWithValue("Surname", logDto.Surname);
+                    cmd.ExecuteNonQuery();
+                }
+                dbConnection.Close();
             }
         }
     }
