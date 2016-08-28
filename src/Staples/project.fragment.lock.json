@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "exports": {
+    "Models/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/Models.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/Models.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Models.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "Repository/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/Repository.dll": {}
+      },
+      "runtime": {
+        "../packages/AutoMapper.5.1.1/lib/net45/AutoMapper.dll": {},
+        "../packages/NLog.4.3.7/lib/net45/NLog.dll": {},
+        "bin/Debug/Repository.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Repository.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        },
+        "bin/Debug/database.mdf": {
+          "buildAction": "Content",
+          "codeLanguage": "any",
+          "copyToOutput": true,
+          "outputPath": "database.mdf"
+        },
+        "bin/Debug/database_log.ldf": {
+          "buildAction": "Content",
+          "codeLanguage": "any",
+          "copyToOutput": true,
+          "outputPath": "database_log.ldf"
+        },
+        "bin/Debug/nlog.config": {
+          "buildAction": "Content",
+          "codeLanguage": "any",
+          "copyToOutput": true,
+          "outputPath": "nlog.config"
+        }
+      }
+    }
+  }
+}

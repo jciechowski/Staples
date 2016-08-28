@@ -1,6 +1,10 @@
-﻿namespace Staples.Models
+﻿using Microsoft.AspNetCore.Mvc;
+using Models;
+using System;
+
+namespace Staples.Models
 {
-    public class Person
+    public class Person : IPerson
     {
         public string Name { get; set; }
         public string Surname { get; set; }

@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Mvc": "1.0.0",
@@ -25,7 +25,16 @@
   },
 
   "frameworks": {
-    "net461": { }
+    "net461": {
+      "dependencies": {
+        "Models": {
+          "target": "project"
+        },
+        "Repository": {
+          "target": "project"
+        }
+      }
+    }
   },
 
   "buildOptions": {
