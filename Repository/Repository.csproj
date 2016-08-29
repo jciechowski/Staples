@@ -87,10 +87,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Models\DbLog.cs" />
-    <Compile Include="Models\TxtLog.cs" />
+    <Compile Include="Services\DbLog.cs" />
+    <Compile Include="Services\TxtLog.cs" />
     <Compile Include="Services\LogService.cs" />
-    <Compile Include="Models\XmlLog.cs" />
+    <Compile Include="Services\XmlLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="LogInfo.mdf">

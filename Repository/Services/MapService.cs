@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Models;
+using Repository.Models;
 
 namespace Repository.Services
 {

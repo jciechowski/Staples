@@ -1,4 +1,4 @@
-﻿namespace Repository
+﻿namespace Repository.Models
 {
     public class LogDto
     {
