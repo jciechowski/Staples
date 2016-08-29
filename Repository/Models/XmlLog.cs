@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Serialization;
 
-namespace Repository
+namespace Repository.Models
 {
     public class XmlLog : ILogger
     {

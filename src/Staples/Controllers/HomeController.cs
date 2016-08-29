@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Repository;
+using Repository.Services;
 using Staples.Models;
 
 namespace Staples.Controllers

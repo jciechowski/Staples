@@ -1,8 +1,9 @@
 ﻿using Castle.Windsor;
 using Models;
 using Repository.Installers;
+using Repository.Models;
 
-namespace Repository
+namespace Repository.Services
 {
     public class LogService
     {
@@ -14,7 +15,7 @@ namespace Repository
         }
         public void Log(IPerson person)
         {
-            var logDto = new MapService().Map(person);
+            var logDto = MapService.Map(person);
             var loggers = _container.ResolveAll<ILogger>();
             foreach (var logger in loggers)
             {
@@ -24,7 +25,7 @@ namespace Repository
 
         public void LogToXml(IPerson person)
         {
-            var logDto = new MapService().Map(person);
+            var logDto = MapService.Map(person);
             var xmlLogger = _container.Resolve<XmlLog>("XmlLog");
             xmlLogger.Log(logDto);
         }
