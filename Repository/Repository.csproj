@@ -74,11 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Installers\LoggerInstallers.cs" />
-    <Compile Include="LogInfoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Models\LogDto.cs" />
     <Compile Include="Models\ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,17 +95,6 @@
     </Content>
     <None Include="app.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInfoDataSet.xsc">
-      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="LogInfoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInfoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInfoDataSet.xss">
-      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
     </None>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
