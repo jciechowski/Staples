@@ -26,6 +26,8 @@
       },
       "runtime": {
         "../packages/AutoMapper.5.1.1/lib/net45/AutoMapper.dll": {},
+        "../packages/Castle.Core.3.3.0/lib/net45/Castle.Core.dll": {},
+        "../packages/Castle.Windsor.3.3.0/lib/net45/Castle.Windsor.dll": {},
         "../packages/NLog.4.3.7/lib/net45/NLog.dll": {},
         "bin/Debug/Repository.dll": {}
       },

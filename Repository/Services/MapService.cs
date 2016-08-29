@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using Models;
-namespace Repository
+
+namespace Repository.Services
 {
-    public class MapService
+    public static class MapService
     {
-        public LogDto Map(IPerson person)
+        public static LogDto Map(IPerson person)
         {
             Mapper.Initialize(cfg => cfg.CreateMap<IPerson, LogDto>());
             return Mapper.Map<LogDto>(person);
