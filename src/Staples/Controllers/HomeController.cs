@@ -1,17 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Repository;
 using Staples.Models;
-using System;
 
 namespace Staples.Controllers
 {
     public class HomeController : Controller
     {
-        private SaveService _saveService;
+        private readonly LogService _logService;
 
-        public HomeController(SaveService saveService)
+        public HomeController(LogService logService)
         {
-            _saveService = saveService;
+            _logService = logService;
         }
         public IActionResult Index()
         {
@@ -21,8 +20,13 @@ namespace Staples.Controllers
         [HttpPost]
         public IActionResult Create([Bind("Name", "Surname","Address","PhoneNumber")]Person person)
         {
-            _saveService.Save(person);
+            _logService.Log(person);
             return RedirectToAction("Index");
+        }
+
+        public void SaveToLog([Bind("Name", "Surname", "Address", "PhoneNumber")]Person person)
+        {
+            _logService.Log(person);
         }
     }
 }

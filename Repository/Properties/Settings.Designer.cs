@@ -33,5 +33,27 @@ namespace Repository.Properties {
                 return ((string)(this["DatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=LogDB.mdf;Integrated Security" +
+            "=True;Connect Timeout=30")]
+        public string LogDBConnectionString {
+            get {
+                return ((string)(this["LogDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\LogInfo.mdf;I" +
+            "ntegrated Security=True;Connect Timeout=30")]
+        public string LogInfoDbConnectionString {
+            get {
+                return ((string)(this["LogInfoDbConnectionString"]));
+            }
+        }
     }
 }

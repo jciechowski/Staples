@@ -25,15 +25,14 @@
   },
 
   "frameworks": {
-    "net461": {
+    "net46": {
       "dependencies": {
         "Models": {
           "target": "project"
         },
         "Repository": {
           "target": "project"
-        }
-      }
+        }      }
     }
   },
 
