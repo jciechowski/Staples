@@ -37,18 +37,6 @@
           "codeLanguage": "any",
           "copyToOutput": true
         },
-        "bin/Debug/loginfo.mdf": {
-          "buildAction": "Content",
-          "codeLanguage": "any",
-          "copyToOutput": true,
-          "outputPath": "loginfo.mdf"
-        },
-        "bin/Debug/loginfo_log.ldf": {
-          "buildAction": "Content",
-          "codeLanguage": "any",
-          "copyToOutput": true,
-          "outputPath": "loginfo_log.ldf"
-        },
         "bin/Debug/nlog.config": {
           "buildAction": "Content",
           "codeLanguage": "any",

@@ -1,6 +1,6 @@
-﻿using System.Data.SqlClient;
+﻿using System.Configuration;
+using System.Data.SqlClient;
 using Repository.Models;
-using Repository.Properties;
 
 namespace Repository.Services
 {
@@ -8,7 +8,8 @@ namespace Repository.Services
     {
         public void Log(LogDto logDto)
         {
-            using (var dbConnection = new SqlConnection(Settings.Default.LogInfoDbConnectionString))
+            var dbConnectionString = ConfigurationManager.ConnectionStrings["dbConnectionString"].ConnectionString;
+            using (var dbConnection = new SqlConnection(dbConnectionString))
             {
                 dbConnection.Open();
                 using (var cmd = new SqlCommand("INSERT INTO LogInfo ( Name, Surname) VALUES (@Name, @Surname)",dbConnection))

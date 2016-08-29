@@ -63,6 +63,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,11 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Installers\LoggerInstallers.cs" />
-    <Compile Include="LogInfoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Models\LogDto.cs" />
     <Compile Include="Models\ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,30 +89,12 @@
     <Compile Include="Services\XmlLog.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LogInfo.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="LogInfo_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>LogInfo.mdf</DependentUpon>
-    </Content>
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
     <None Include="app.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInfoDataSet.xsc">
-      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="LogInfoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogInfoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LogInfoDataSet.xss">
-      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
     </None>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
