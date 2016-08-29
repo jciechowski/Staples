@@ -9,15 +9,25 @@ namespace Repository.Services
         public void Log(LogDto logDto)
         {
             var dbConnectionString = ConfigurationManager.ConnectionStrings["dbConnectionString"].ConnectionString;
-            using (var dbConnection = new SqlConnection(dbConnectionString))
+            var dbConnection = new SqlConnection(dbConnectionString);
+            try
             {
                 dbConnection.Open();
-                using (var cmd = new SqlCommand("INSERT INTO LogInfo ( Name, Surname) VALUES (@Name, @Surname)",dbConnection))
+                using (
+                    var cmd = new SqlCommand("INSERT INTO LogInfo ( Name, Surname) VALUES (@Name, @Surname)",
+                        dbConnection))
                 {
                     cmd.Parameters.AddWithValue("@Name", logDto.Name);
                     cmd.Parameters.AddWithValue("@Surname", logDto.Surname);
                     cmd.ExecuteNonQuery();
                 }
+            }
+            catch
+            {
+                // ignored
+            }
+            finally
+            {
                 dbConnection.Close();
             }
         }
