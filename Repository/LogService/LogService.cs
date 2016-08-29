@@ -21,5 +21,12 @@ namespace Repository
                 logger.Log(logDto);
             }
         }
+
+        public void LogToXml(IPerson person)
+        {
+            var logDto = new MapService().Map(person);
+            var xmlLogger = _container.Resolve<XmlLog>("XmlLog");
+            xmlLogger.Log(logDto);
+        }
     }
 }

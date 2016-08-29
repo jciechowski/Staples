@@ -8,7 +8,12 @@ namespace Repository.Installers
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Classes.FromThisAssembly().BasedOn<ILogger>().WithService.Select(new [] {typeof(ILogger)}).LifestyleTransient());
+            container.Register(
+                Classes.FromThisAssembly()
+                    .BasedOn<ILogger>()
+                    .WithService.Select(new[] {typeof(ILogger)})
+                    .Configure(c => c.Named(c.Implementation.Name))
+                    .LifestyleTransient());
         }
     }
 }

@@ -24,9 +24,9 @@ namespace Staples.Controllers
             return RedirectToAction("Index");
         }
 
-        public void SaveToLog([Bind("Name", "Surname", "Address", "PhoneNumber")]Person person)
+        public void LogToXml([Bind("Name", "Surname", "Address", "PhoneNumber")]Person person)
         {
-            _logService.Log(person);
+            _logService.LogToXml(person);
         }
     }
 }

@@ -8,17 +8,34 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm("Create","Home",FormMethod.Post))
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
 {
     <p>
         @Html.EditorForModel()
     </p>
     <p>
         <input type="submit" value="Save" />
+        <input type="button" value="Log it" id="logXml" />
     </p>
 }
-<input type="button" value="Log it" onclick="location.href='@Url.Action("Home", "SaveToLog")'" />
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+@section scripts {
+   <script type="text/javascript">
+    $(document).ready(function () {
+        $("#logXml")
+            .click(function(e) {
+                $(this);
+                var values = $(this.form).serializeArray();
+                var person = {name: values[0].value, surname: values[1].value, address: values[2].value, phoneNumber: values[3].value }
+                e.preventDefault();
+                $.ajax({
+                    url: 'Home/LogToXml',
+                    data: person
+                });
+            })
+    });
+</script>
+}
