@@ -18,10 +18,9 @@ namespace Staples.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([Bind("Name", "Surname","Address","PhoneNumber")]Person person)
+        public IActionResult Create([Bind("Name", "Surname", "Address", "PhoneNumber")]Person person)
         {
-            if(ModelState.IsValid)
-                _logService.Log(person);
+            _logService.Log(person);
             return RedirectToAction("Index");
         }
 
