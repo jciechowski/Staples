@@ -4,11 +4,11 @@ using Repository.Installers;
 
 namespace Repository
 {
-    public abstract class LogService
+    public class LogService
     {
         private readonly IWindsorContainer _container;
 
-        protected LogService()
+        public LogService()
         {
             _container = new WindsorContainer().Install(new LoggerInstallers());
         }
