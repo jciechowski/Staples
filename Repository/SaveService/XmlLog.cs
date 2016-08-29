@@ -4,9 +4,9 @@ using System.Xml.Serialization;
 
 namespace Repository
 {
-    public class SaveXml : ISaveable
+    public class XmlLog : ILogger
     {
-        public void Save(LogDto logDto)
+        public void Log(LogDto logDto)
         {
             var xmlSerializer = new XmlSerializer(typeof(LogDto));
             // TODO

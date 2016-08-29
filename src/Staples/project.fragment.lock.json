@@ -3,7 +3,7 @@
   "exports": {
     "Models/1.0.0": {
       "type": "project",
-      "framework": ".NETFramework,Version=v4.6.1",
+      "framework": ".NETFramework,Version=v4.6",
       "compile": {
         "bin/Debug/Models.dll": {}
       },
@@ -20,7 +20,7 @@
     },
     "Repository/1.0.0": {
       "type": "project",
-      "framework": ".NETFramework,Version=v4.6.1",
+      "framework": ".NETFramework,Version=v4.6",
       "compile": {
         "bin/Debug/Repository.dll": {}
       },
@@ -35,17 +35,17 @@
           "codeLanguage": "any",
           "copyToOutput": true
         },
-        "bin/Debug/logdb.mdf": {
+        "bin/Debug/loginfo.mdf": {
           "buildAction": "Content",
           "codeLanguage": "any",
           "copyToOutput": true,
-          "outputPath": "logdb.mdf"
+          "outputPath": "loginfo.mdf"
         },
-        "bin/Debug/logdb_log.ldf": {
+        "bin/Debug/loginfo_log.ldf": {
           "buildAction": "Content",
           "codeLanguage": "any",
           "copyToOutput": true,
-          "outputPath": "logdb_log.ldf"
+          "outputPath": "loginfo_log.ldf"
         },
         "bin/Debug/nlog.config": {
           "buildAction": "Content",

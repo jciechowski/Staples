@@ -2,10 +2,10 @@
 
 namespace Repository
 {
-    public class SaveLog : ISaveable
+    public class TxtLog : ILogger
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        public void Save(LogDto logDto)
+        public void Log(LogDto logDto)
         {
             logger.Log(LogLevel.Info, logDto.Name + " " + logDto.Surname);
         }

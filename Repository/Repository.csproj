@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,13 +64,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogDBDataSet.Designer.cs">
+    <Compile Include="LogInfoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LogDBDataSet.xsd</DependentUpon>
+      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SaveService\LogDto.cs" />
-    <Compile Include="SaveService\ISaveable.cs" />
+    <Compile Include="SaveService\ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveService\MapService.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -78,18 +78,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SaveService\SaveDb.cs" />
-    <Compile Include="SaveService\SaveLog.cs" />
-    <Compile Include="SaveService\SaveService.cs" />
-    <Compile Include="SaveService\SaveXml.cs" />
+    <Compile Include="SaveService\DbLog.cs" />
+    <Compile Include="SaveService\TxtLog.cs" />
+    <Compile Include="SaveService\LogService.cs" />
+    <Compile Include="SaveService\XmlLog.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LogDB.mdf">
+    <Content Include="LogInfo.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="LogDB_log.ldf">
-      <DependentUpon>LogDB.mdf</DependentUpon>
+    <Content Include="LogInfo_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>LogInfo.mdf</DependentUpon>
     </Content>
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -98,16 +98,16 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="LogDBDataSet.xsc">
-      <DependentUpon>LogDBDataSet.xsd</DependentUpon>
+    <None Include="LogInfoDataSet.xsc">
+      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
     </None>
-    <None Include="LogDBDataSet.xsd">
+    <None Include="LogInfoDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LogDBDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>LogInfoDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="LogDBDataSet.xss">
-      <DependentUpon>LogDBDataSet.xsd</DependentUpon>
+    <None Include="LogInfoDataSet.xss">
+      <DependentUpon>LogInfoDataSet.xsd</DependentUpon>
     </None>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
