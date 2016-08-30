@@ -20,8 +20,12 @@ namespace Staples.Controllers
         [HttpPost]
         public IActionResult Create([Bind("Name", "Surname", "Address", "PhoneNumber")]Person person)
         {
-            _logService.Log(person);
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            {
+                _logService.Log(person);
+                return RedirectToAction("Index");
+            }
+            return View("Index");
         }
 
         public void LogToXml([Bind("Name", "Surname", "Address", "PhoneNumber")]Person person)
